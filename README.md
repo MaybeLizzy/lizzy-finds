@@ -1,6 +1,6 @@
 # Lizzy Finds
 
-English, buildless static content website. Local version only; no public hosting or affiliate tracking.
+English static content website hosted on GitHub Pages. No affiliate tracking.
 
 ## Preview
 
@@ -28,4 +28,10 @@ After editing content or page templates run `node build.cjs`. For a new article,
 
 Sony prices are a dated snapshot checked on October 10, 2026, not live prices. XM3 and XM4 need personal quotes to join a price-weighted ranking. Reviews are intentionally empty pending Lizzy’s actual experience.
 
-The cover is an original typographic SVG, not a product photograph. No external fonts, image services, cookies, analytics or storage are used. Privacy copy must be reviewed against the actual hosting setup before public launch. Domain purchase, hosting and affiliate approval remain pending.
+The cover is an original typographic SVG, not a product photograph. No external fonts, image services, cookies, analytics or storage are used. Privacy copy identifies GitHub Pages as the hosting provider. Custom domain purchase and affiliate approval remain pending.
+
+## Public website and deployment
+
+https://maybelizzy.github.io/lizzy-finds/
+
+Push changes to main to rebuild and deploy dist automatically through GitHub Actions. The local repository tracks origin/main at https://github.com/MaybeLizzy/lizzy-finds.git .
