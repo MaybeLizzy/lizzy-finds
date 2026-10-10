@@ -1,0 +1,116 @@
+[
+  {
+    "id": "XM3",
+    "full": "WH-1000XM3",
+    "scores": [
+      8,
+      7,
+      6
+    ],
+    "price": null,
+    "buy": false,
+    "weight": 255,
+    "comfort": "Traditional over-ear fit. Check ageing pads and whether your ears touch the lining.",
+    "sound": "Bass-forward tuning with active noise cancellation. Age alone does not determine your preferred sound.",
+    "eco": "Foldable design; lacks the later models’ two-device multipoint.",
+    "battery": "30 / 38",
+    "codec": "SBC, AAC, aptX, aptX HD, LDAC",
+    "url": "https://www.sony.com/electronics/support/wireless-headphones/wh-1000xm3",
+    "spec": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-1000xm3/specifications"
+  },
+  {
+    "id": "XM4",
+    "full": "WH-1000XM4",
+    "scores": [
+      8.5,
+      8,
+      7.5
+    ],
+    "price": 349.99,
+    "buy": false,
+    "weight": 254,
+    "comfort": "Traditional padded design. Check ear-cup depth and pressure around glasses.",
+    "sound": "Warm, bass-forward sound and premium ANC; not intended as a neutral default tuning.",
+    "eco": "Foldable; multipoint disables LDAC on this model.",
+    "battery": "30 / 38",
+    "codec": "SBC, AAC, LDAC",
+    "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm4-b",
+    "spec": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-1000xm4/specifications"
+  },
+  {
+    "id": "XM5",
+    "full": "WH-1000XM5",
+    "scores": [
+      7.5,
+      8.5,
+      8
+    ],
+    "price": 198,
+    "buy": true,
+    "weight": 250,
+    "comfort": "Slim headband and roomy pads. Check for concentrated pressure at the top of your head.",
+    "sound": "Full, warm presentation with strong ANC. The tuning may not suit every listener.",
+    "eco": "Minimal styling, non-folding frame; updated firmware supports LDAC with multipoint.",
+    "battery": "30 / 40",
+    "codec": "SBC, AAC, LDAC",
+    "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b",
+    "spec": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-1000xm5/specifications"
+  },
+  {
+    "id": "XM6",
+    "full": "WH-1000XM6",
+    "scores": [
+      8.5,
+      9,
+      9
+    ],
+    "price": 378,
+    "buy": true,
+    "weight": 254,
+    "comfort": "Wider headband and revised cushioning. Fit improvements remain dependent on your head shape.",
+    "sound": "Warm presentation; same-method isolation comparisons favour it over XM5, though everyday gains vary.",
+    "eco": "Folding frame and magnetic case; multipoint, LDAC and LC3 require compatible devices.",
+    "battery": "30 / 40",
+    "codec": "SBC, AAC, LDAC, LC3",
+    "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+    "spec": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-1000xm6/specifications"
+  },
+  {
+    "id": "CH720N",
+    "full": "WH-CH720N",
+    "scores": [
+      9,
+      6.5,
+      7
+    ],
+    "price": 88,
+    "buy": true,
+    "weight": 192,
+    "comfort": "Lightweight over-ear option. Check the seal and stability when moving.",
+    "sound": "Everyday listening with ANC and app EQ. No LDAC; codec support alone does not decide sound quality.",
+    "eco": "Practical plastic build, physical controls and multipoint; does not fold inward.",
+    "battery": "35 / 50",
+    "codec": "SBC, AAC",
+    "url": "https://electronics.sony.com/audio/headphones/headband/p/whch720n-b",
+    "spec": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-ch720n/specifications"
+  },
+  {
+    "id": "CH520",
+    "full": "WH-CH520",
+    "scores": [
+      6.5,
+      4,
+      6
+    ],
+    "price": 33,
+    "buy": true,
+    "weight": 147,
+    "comfort": "Lightest here, but on-ear pads press directly on the ears. Check glasses and prolonged pressure.",
+    "sound": "No active noise cancellation and limited passive isolation. Better suited to quiet surroundings.",
+    "eco": "Compact on-ear design, multipoint and physical controls; no wired listening or supplied case.",
+    "battery": "— / 50",
+    "codec": "SBC, AAC",
+    "url": "https://electronics.sony.com/audio/headphones/headband/p/whch520-l",
+    "spec": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-ch520/specifications"
+  }
+]
