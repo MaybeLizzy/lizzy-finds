@@ -32,6 +32,17 @@ page('guides/sony-headphones-comparison/','Sony Headphones Compared','Compare So
 require('./build-shokz.cjs')({root,page});
 }
 build();
+// Include the homepage, guide directory and published articles in the search sitemap.
+const sitemapBase='https://maybelizzy.github.io/lizzy-finds/';
+const sitemapPosts=JSON.parse(fs.readFileSync(path.join(root,'content','posts.json'),'utf8'));
+const sitemapRoutes=[...new Set(['','guides/',...sitemapPosts.map(post=>post.path)])];
+const sitemapEscape=value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&apos;');
+const sitemapUrls=sitemapRoutes.map(route=>{
+  if(route.startsWith('/') || route.includes('..') || !/^(?:[a-z0-9-]+\/)*$/.test(route))throw new Error('Invalid sitemap route: '+route);
+  if(!fs.existsSync(path.join(root,'dist',route,'index.html')))throw new Error('Missing sitemap page: '+route);
+  return '  <url><loc>'+sitemapEscape(sitemapBase+route)+'</loc></url>';
+});
+fs.writeFileSync(path.join(root,'dist','sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+sitemapUrls.join('\n')+'\n</urlset>\n');
 fs.writeFileSync(path.join(root,'build.cjs'),`require('./build-lizzy.cjs');\n`);
 if(__filename!==path.join(root,'build-lizzy.cjs'))fs.copyFileSync(__filename,path.join(root,'build-lizzy.cjs'));
 console.log('Built 8 pages at '+root);
