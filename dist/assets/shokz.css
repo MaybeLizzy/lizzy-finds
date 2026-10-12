@@ -3,3 +3,14 @@
 .shokz-photo{width:150px;height:120px;object-fit:contain;background:white;border-radius:8px}.shokz-winner-photo{width:180px;height:150px;object-fit:contain;float:right;margin:0 0 18px 18px;background:white}@media(max-width:650px){.shokz-winner-photo{float:none;margin:0 auto 18px}}
 
 .shokz-summary-item{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}.shokz-summary-item img{object-fit:contain}.shokz-summary-item h3{margin:0 0 8px;font-size:20px}.shokz-summary-item p{margin:0}@media(max-width:650px){.shokz-summary-item{grid-template-columns:70px minmax(0,1fr);gap:12px}.shokz-summary-item img{width:70px}.shokz-summary-item .button{grid-column:1/-1;text-align:center}}
+/* Approved recommendation card; other article styling stays unchanged. */
+.recommend-poster{position:relative;background:#d9ff67;border-radius:24px;padding:38px 42px;margin-bottom:32px;color:#17213a}
+.answer-kicker{display:block;font-size:12px;letter-spacing:2px;font-weight:800}
+.shokz .recommend-poster h2{font-size:clamp(34px,5vw,56px);line-height:1.08;letter-spacing:-2px;max-width:calc(100% - 225px);margin:20px 0}
+.recommend-poster h2 em{font-style:normal;color:#5132e8}
+.recommend-poster p{max-width:740px;font-size:18px;line-height:1.65}
+.recommend-poster .answer-detail{font-size:14px;color:#3d4960;max-width:660px}
+.recommend-poster>a{background:#17213a;color:white;padding:13px 22px;border-radius:99px;text-decoration:none;font-weight:800;display:inline-flex;gap:26px;align-items:center;margin-top:14px}
+.recommend-brand{position:absolute;right:30px;top:28px;width:215px;height:172px;object-fit:contain;mix-blend-mode:multiply}
+.recommend-poster>a:focus-visible{outline:3px solid #5132e8;outline-offset:4px}
+@media(max-width:650px){.recommend-poster{padding:26px 23px}.recommend-brand{position:static;display:block;width:150px;height:120px;margin:8px auto 0}.shokz .recommend-poster h2{font-size:34px;letter-spacing:-1px;max-width:100%}.recommend-poster p{font-size:16px}}
