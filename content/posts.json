@@ -7,5 +7,14 @@
     "date": "2026-10-10",
     "description": "Six models. Four priorities. A comparison that adapts to what matters to you.",
     "image": "assets/sony-cover.svg"
+  },
+  {
+    "title": "Which Shokz fits your run?",
+    "path": "guides/shokz-running-headphones/",
+    "type": "guide",
+    "tag": "Audio",
+    "date": "2026-10-10",
+    "description": "Five running headphones. Seven priorities. Find your fit without blocking the world.",
+    "image": "assets/shokz-running.svg"
   }
 ]

@@ -1,0 +1,4 @@
+const clamp=x=>Math.max(0,Math.min(10,x));
+function scores(m,price=m.price,port=m.port){return [10,m.hybrid?10:m.id==='pro'?8:6,m.battery/12*10,m.ip==='IP67'?10:7,m.hybrid?10:m.id==='pro'?6:3,m.weight===null?null:clamp((35-m.weight)/10*10),price===null?null:clamp((250-price)/150*10)];}
+function rank(models,weights,size='any',pure=false,quotes={},ports={}){const total=weights.reduce((a,b)=>a+b,0);if(!total)return [];return models.filter(m=>(size==='any'||m.size===size)&&(!pure||!m.hybrid)).map(m=>{const s=scores(m,Object.hasOwn(quotes,m.id)?quotes[m.id]:m.price,ports[m.id]||m.port);return {m,s,score:s.some((v,i)=>v===null&&weights[i]>0)?null:s.reduce((a,v,i)=>a+(v||0)*weights[i],0)/total};}).sort((a,b)=>(b.score??-1)-(a.score??-1));}
+if(typeof module!=='undefined')module.exports={scores,rank};
