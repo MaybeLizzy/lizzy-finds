@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maybelizzy.github.io/lizzy-finds/sitemap.xml

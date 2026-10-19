@@ -1,0 +1,1 @@
+document.querySelectorAll('.product-picture img').forEach(img=>img.addEventListener('error',()=>{img.hidden=true;const note=document.createElement('p');note.className='image-fallback';note.textContent=img.alt+' — image unavailable';img.after(note);},{once:true}));

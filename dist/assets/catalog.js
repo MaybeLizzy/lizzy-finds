@@ -1,0 +1,1 @@
+(()=>{const products=document.querySelector('#catalog-products');if(!products)return;const buttons=document.querySelectorAll('[data-view][aria-pressed]');buttons.forEach(button=>button.addEventListener('click',()=>{products.dataset.view=button.dataset.view;buttons.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));}));})();
