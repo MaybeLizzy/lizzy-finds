@@ -19,4 +19,5 @@ for (const [from,to] of [['guides/','../recommendations/'],['guides/shokz-runnin
 fs.writeFileSync(path.join(output,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+routes.map(r=>`<url><loc>${base+r}</loc></url>`).join('')+'</urlset>\n');
 fs.writeFileSync(path.join(output,'robots.txt'),`User-agent: *\nAllow: /\nSitemap: ${base}sitemap.xml\n`);
 fs.writeFileSync(path.join(output,'.nojekyll'),'');
+require('./add-analytics.cjs')(output);
 console.log('Built refreshed Lizzy Finds with canonical pages, sitemap and legacy Shokz redirects.');
