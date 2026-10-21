@@ -1,6 +1,6 @@
 (function(global){
  'use strict';
- const defaults={hybrid_audio:50,battery:60,protection:60,lightweight:40,quick_charge:40,budget:70};
+ const defaults={hybrid_audio:50,battery:50,protection:50,lightweight:50,quick_charge:50,budget:50};
  function baseScores(m,models,currency){
   const lightest=Math.min(...models.map(x=>x.weight));
   const cheapest=Math.min(...models.map(x=>Number(x[currency])));
@@ -37,7 +37,7 @@
    const price=currency.value==='usd'?'$'+m.usd:'€'+m.eur;
    return `<li class="match-item${winner?' best-match':''}${!m.eligible?' outside-match':''}" data-model="${m.id}" data-eligible="${m.eligible}">${flag?`<span class="match-flag">${esc(flag)}${winner&&close?' · Close match':''}</span>`:''}<div class="match-product"><span class="match-position">${i+1}.</span><h3>${esc(m.name)}</h3><span class="match-score">${hasWeights?m.score.toFixed(1):'—'}<span> / 100</span></span></div>${winner?`<p class="match-reason">${esc(reason(m,w))}</p>`:''}${!m.eligible?`<p class="match-excluded">${m.excluded.map(esc).join(' · ')}</p>`:''}<div class="match-buy"><span>${price}</span><a href="${esc(m.url)}" target="_blank" rel="sponsored noopener noreferrer">View at Amazon ↗</a></div></li>`;
   }).join('');
-  for(const d of dimensions){const input=el('priority-'+d.key);el('value-'+d.key).value=input.value;input.style.setProperty('--fill',input.value+'%');}
+  for(const d of dimensions){const input=el('priority-'+d.key);el('value-'+d.key).value=input.value+'%';input.style.setProperty('--fill',input.value+'%');}
  }
  for(const d of dimensions)el('priority-'+d.key).addEventListener('input',render);
  for(const input of [size,currency,pure])input.addEventListener('change',render);
@@ -67,7 +67,7 @@
  global.addEventListener('scroll',()=>{if(pinned&&active){const r=active.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)hideTip(true);else showTip(active,null,true);}else hideTip(true);},{passive:true});global.addEventListener('resize',()=>hideTip(true));
  // Persistent, non-modal product shortcuts; links retain the owner's affiliate URLs.
  const shortcuts=document.createElement('aside');shortcuts.className='product-shortcuts';shortcuts.setAttribute('aria-label','Quick product links');
- shortcuts.innerHTML=`<section id="quick-products" class="quick-products" role="dialog" aria-modal="false" aria-labelledby="quick-products-title" hidden><div class="quick-products-head"><h2 id="quick-products-title">The Shokz lineup</h2><button type="button" class="quick-products-close" aria-label="Close product list">×</button></div><p>Choose a model to view it at Amazon.</p><ul>${models.map(m=>`<li><span>${esc(m.name)}</span><a href="${esc(m.url)}" target="_blank" rel="sponsored noopener noreferrer" aria-label="View ${esc(m.name)} at Amazon">Amazon <span aria-hidden="true">↗</span></a></li>`).join('')}</ul></section><button type="button" id="quick-products-toggle" class="quick-products-toggle" aria-label="Open product list" aria-controls="quick-products" aria-expanded="false" aria-haspopup="dialog" title="Product links"><svg width="27" height="27" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8.5h16l1.5 16h-19l1.5-16Z"/><path d="M10 9V6a4 4 0 0 1 8 0v3M9.5 14h9M9.5 18h9"/></svg><span class="sr-only">Five Shokz products</span></button>`;
+ shortcuts.innerHTML=`<section id="quick-products" class="quick-products" role="dialog" aria-modal="false" aria-labelledby="quick-products-title" hidden><div class="quick-products-head"><h2 id="quick-products-title">The SHOKZ OpenRun lineup</h2><button type="button" class="quick-products-close" aria-label="Close product list">×</button></div><p>Choose a model to view it at Amazon.</p><ul>${models.map(m=>`<li><span>${esc(m.name)}</span><a href="${esc(m.url)}" target="_blank" rel="sponsored noopener noreferrer" aria-label="View ${esc(m.name)} at Amazon">Amazon <span aria-hidden="true">↗</span></a></li>`).join('')}</ul></section><button type="button" id="quick-products-toggle" class="quick-products-toggle" aria-label="Open product list" aria-controls="quick-products" aria-expanded="false" aria-haspopup="dialog" title="Product links"><svg width="27" height="27" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8.5h16l1.5 16h-19l1.5-16Z"/><path d="M10 9V6a4 4 0 0 1 8 0v3M9.5 14h9M9.5 18h9"/></svg><span class="sr-only">Five SHOKZ OpenRun products</span></button>`;
  document.body.append(shortcuts);
  const productsPanel=el('quick-products'),productsToggle=el('quick-products-toggle');
  function closeProducts(restoreFocus=false){productsPanel.hidden=true;productsToggle.setAttribute('aria-expanded','false');productsToggle.setAttribute('aria-label','Open product list');if(restoreFocus)productsToggle.focus();}

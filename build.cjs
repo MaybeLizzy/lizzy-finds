@@ -6,7 +6,7 @@ fs.mkdirSync(output, {recursive:true});
 function copy(src,dest){if(fs.statSync(src).isDirectory()){fs.mkdirSync(dest,{recursive:true});for(const entry of fs.readdirSync(src))copy(path.join(src,entry),path.join(dest,entry));}else fs.copyFileSync(src,dest);}
 for (const name of ['index.html','assets','content','recommendations','finds','privacy','affiliate-disclosure','contact']) copy(path.join(root,name),path.join(output,name));
 const base = 'https://maybelizzy.github.io/lizzy-finds/';
-const routes = ['','recommendations/','recommendations/shokz-running-headphones/','finds/','privacy/','affiliate-disclosure/'];
+const routes = ['','recommendations/','recommendations/shokz-running-headphones/','recommendations/shokz-openfit-headphones/','finds/','privacy/','affiliate-disclosure/'];
 for (const route of routes) {
  const file=path.join(output,route,'index.html');
  const html=fs.readFileSync(file,'utf8').replace(/<link\b[^>]*rel="canonical"[^>]*>/g,'');
